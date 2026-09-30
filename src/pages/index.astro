@@ -71,37 +71,37 @@ import '../styles/global.css';
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="bg-blue-200 text-blue-800 text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider">Estrategia 1</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-4 mb-4">Aprendizaje Significativo y Proyectos Innovadores</h2>
-                <p class="text-lg text-slate-600">Enfoque pedagógico basado en el Constructivismo (David Ausubel). Haz clic en las tarjetas para expandir la metodología aplicada en el aula.</p>
+                <p class="text-lg text-slate-600">Enfoque pedagógico basado en el Constructivismo (David Ausubel).</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Tarjeta 1 -->
-                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group flex flex-col">
                     <div class="p-8 bg-emerald-500 text-white text-center group-hover:bg-emerald-600 transition-colors relative overflow-hidden">
                         <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🧩</div>
                         <h3 class="text-2xl font-bold relative z-10">Conexión de Saberes</h3>
                     </div>
-                    <div class="p-8 hidden card-content bg-emerald-50/50">
+                    <div class="p-8 bg-emerald-50/50 flex-grow">
                         <p class="text-slate-700 text-lg">El aprendizaje ocurre cuando la nueva información se ancla en los conocimientos previos del estudiante. Para que sea verdaderamente significativo, el contenido debe tener lógica y conectar directamente con la realidad comunitaria del alumno, huyendo de la memorización aislada.</p>
                     </div>
                 </div>
                 <!-- Tarjeta 2 -->
-                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group flex flex-col">
                     <div class="p-8 bg-teal-600 text-white text-center group-hover:bg-teal-700 transition-colors relative overflow-hidden">
                         <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🏗️</div>
                         <h3 class="text-2xl font-bold relative z-10">Estudiante Constructor</h3>
                     </div>
-                    <div class="p-8 hidden card-content bg-teal-50/50">
+                    <div class="p-8 bg-teal-50/50 flex-grow">
                         <p class="text-slate-700 text-lg">Se descarta el modelo conductista de transmisión pasiva. El estudiante es el constructor activo de su propio conocimiento. La institución provee un entorno seguro donde el error no es castigado, sino que se utiliza como un andamiaje clave para el aprendizaje.</p>
                     </div>
                 </div>
                 <!-- Tarjeta 3 -->
-                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group flex flex-col">
                     <div class="p-8 bg-cyan-600 text-white text-center group-hover:bg-cyan-700 transition-colors relative overflow-hidden">
                         <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🚀</div>
                         <h3 class="text-2xl font-bold relative z-10">Aprender-Haciendo</h3>
                     </div>
-                    <div class="p-8 hidden card-content bg-cyan-50/50">
+                    <div class="p-8 bg-cyan-50/50 flex-grow">
                         <p class="text-slate-700 text-lg">A través de proyectos innovadores y metodologías activas, los estudiantes desarrollan habilidades prácticas, colaborativas y aplicables a su contexto. Esto responde al mandato de formar individuos "críticos, reflexivos y creativos con valores".</p>
                     </div>
                 </div>
@@ -231,16 +231,6 @@ import '../styles/global.css';
     </style>
 
     <script>
-        // Lógica de las tarjetas (Estrategia 1)
-        const cards = document.querySelectorAll('.card-btn');
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const content = card.querySelector('.card-content');
-                // Alternar visibilidad con Tailwind classes
-                content.classList.toggle('hidden');
-            });
-        });
-
         // Lógica de las pestañas (Estrategia 2)
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
