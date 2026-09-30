@@ -9,113 +9,226 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educación para la Ciudadanía - Proyecto Áulico</title>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-normal tracking-normal">
+<body class="bg-slate-50 text-slate-800 font-sans leading-normal tracking-normal selection:bg-blue-300 selection:text-blue-900">
 
-    <!-- HERO / PORTADA -->
-    <header class="bg-blue-900 text-white p-10 text-center shadow-lg">
-        <h2 class="text-xl font-light mb-2">Maestría de Educación de Bachillerato</h2>
-        <h1 class="text-4xl font-bold mb-4">Educación para la Ciudadanía y su Didáctica</h1>
-        <div class="max-w-3xl mx-auto bg-blue-800 p-6 rounded-lg shadow mt-6">
-            <h3 class="text-2xl font-semibold mb-2">Proyecto Áulico - Unidad 3</h3>
-            <p class="text-lg"><strong>Integrantes:</strong> Guido Churo y Carolina Lara</p>
-            <p class="text-lg mt-2"><strong>Profesor:</strong> Carlos Eduardo Fonseca Largo</p>
+    <!-- HERO / PORTADA CON GRADIENTE -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white p-12 text-center shadow-2xl relative overflow-hidden">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <pattern id="pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="2" fill="currentColor"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#pattern)"/>
+            </svg>
+        </div>
+
+        <div class="relative z-10">
+            <h2 class="text-xl md:text-2xl font-light mb-2 text-blue-200 uppercase tracking-widest">Maestría de Educación de Bachillerato</h2>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-md">Educación para la Ciudadanía y su Didáctica</h1>
+            <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-xl mt-8">
+                <h3 class="text-3xl font-semibold mb-6 text-yellow-300">Proyecto Áulico - Unidad 3</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                    <div class="bg-black/20 p-4 rounded-lg">
+                        <p class="text-sm text-blue-200 uppercase tracking-wider mb-1">Integrantes</p>
+                        <p class="text-xl font-medium">Guido Churo y Carolina Lara</p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-lg">
+                        <p class="text-sm text-blue-200 uppercase tracking-wider mb-1">Docente</p>
+                        <p class="text-xl font-medium">Carlos Eduardo Fonseca Largo</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- OBJETIVO -->
-    <section class="max-w-5xl mx-auto py-10 px-4">
-        <div class="bg-white border-l-4 border-blue-500 p-6 rounded shadow">
-            <h3 class="text-2xl font-bold text-blue-900 mb-2">Objetivo del Recurso</h3>
-            <p class="text-lg text-gray-700">
-                Desarrollar un recurso interactivo que integre recursos multimedia dinámicos, diseñados para optimizar los procesos de enseñanza y aprendizaje en el aula, fomentando la comprensión y participación activa de los estudiantes de la Unidad Educativa Macandamine.
-            </p>
+    <!-- INTRODUCCIÓN Y PROPÓSITO MISIONAL -->
+    <section class="max-w-6xl mx-auto py-12 px-4 md:px-8 mt-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white border-l-8 border-blue-600 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🎯</span> Objetivo del Recurso
+                </h3>
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    Desarrollar un recurso interactivo que integre recursos multimedia dinámicos, diseñados para optimizar los procesos de enseñanza y aprendizaje en el aula, fomentando la comprensión y participación activa de los estudiantes de la <strong>Unidad Educativa Macandamine</strong>.
+                </p>
+            </div>
+            
+            <div class="bg-white border-l-8 border-yellow-500 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-2xl font-bold text-yellow-700 mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🏫</span> Propósito Misional
+                </h3>
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    Ofertar una educación inclusiva, igualitaria e integral, desarrollando habilidades mediante <strong>metodologías activas</strong> que favorezcan el <em>aprendizaje significativo</em>, formando estudiantes críticos, reflexivos y vinculados a su comunidad.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- ESTRATEGIA 1: CONSTRUCTIVISMO Y PROYECTOS -->
-    <section class="max-w-5xl mx-auto py-10 px-4">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Estrategia 1: Aprendizaje Significativo y Proyectos Innovadores</h2>
-        <p class="text-center mb-8 text-gray-600">Haz clic en cada tarjeta para explorar cómo aplicamos el enfoque constructivista (David Ausubel).</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Tarjeta 1 -->
-            <div class="card-btn bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition transform hover:-translate-y-1">
-                <div class="p-6 bg-green-500 text-white text-center">
-                    <h3 class="text-xl font-bold">1. Conexión de Saberes</h3>
-                </div>
-                <div class="p-6 hidden card-content">
-                    <p>El aprendizaje ocurre cuando la nueva información se ancla en los conocimientos previos del estudiante, conectando con la realidad comunitaria.</p>
-                </div>
+    <section class="bg-blue-50 py-16 border-y border-blue-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-blue-200 text-blue-800 text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider">Estrategia 1</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-4 mb-4">Aprendizaje Significativo y Proyectos Innovadores</h2>
+                <p class="text-lg text-slate-600">Enfoque pedagógico basado en el Constructivismo (David Ausubel). Haz clic en las tarjetas para expandir la metodología aplicada en el aula.</p>
             </div>
-            <!-- Tarjeta 2 -->
-            <div class="card-btn bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition transform hover:-translate-y-1">
-                <div class="p-6 bg-green-600 text-white text-center">
-                    <h3 class="text-xl font-bold">2. El Estudiante como Constructor</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                    <div class="p-8 bg-emerald-500 text-white text-center group-hover:bg-emerald-600 transition-colors relative overflow-hidden">
+                        <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🧩</div>
+                        <h3 class="text-2xl font-bold relative z-10">Conexión de Saberes</h3>
+                    </div>
+                    <div class="p-8 hidden card-content bg-emerald-50/50">
+                        <p class="text-slate-700 text-lg">El aprendizaje ocurre cuando la nueva información se ancla en los conocimientos previos del estudiante. Para que sea verdaderamente significativo, el contenido debe tener lógica y conectar directamente con la realidad comunitaria del alumno, huyendo de la memorización aislada.</p>
+                    </div>
                 </div>
-                <div class="p-6 hidden card-content">
-                    <p>El estudiante no es un receptor pasivo, sino el constructor activo de su conocimiento. El error es parte fundamental del aprendizaje en un ambiente seguro.</p>
+                <!-- Tarjeta 2 -->
+                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                    <div class="p-8 bg-teal-600 text-white text-center group-hover:bg-teal-700 transition-colors relative overflow-hidden">
+                        <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🏗️</div>
+                        <h3 class="text-2xl font-bold relative z-10">Estudiante Constructor</h3>
+                    </div>
+                    <div class="p-8 hidden card-content bg-teal-50/50">
+                        <p class="text-slate-700 text-lg">Se descarta el modelo conductista de transmisión pasiva. El estudiante es el constructor activo de su propio conocimiento. La institución provee un entorno seguro donde el error no es castigado, sino que se utiliza como un andamiaje clave para el aprendizaje.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Tarjeta 3 -->
-            <div class="card-btn bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition transform hover:-translate-y-1">
-                <div class="p-6 bg-green-700 text-white text-center">
-                    <h3 class="text-xl font-bold">3. Aprender-Haciendo</h3>
-                </div>
-                <div class="p-6 hidden card-content">
-                    <p>Implementación de metodologías activas y colaborativas mediante proyectos innovadores que fortalezcan el tejido de la comunidad.</p>
+                <!-- Tarjeta 3 -->
+                <div class="card-btn bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 group">
+                    <div class="p-8 bg-cyan-600 text-white text-center group-hover:bg-cyan-700 transition-colors relative overflow-hidden">
+                        <div class="text-5xl mb-4 opacity-80 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                        <h3 class="text-2xl font-bold relative z-10">Aprender-Haciendo</h3>
+                    </div>
+                    <div class="p-8 hidden card-content bg-cyan-50/50">
+                        <p class="text-slate-700 text-lg">A través de proyectos innovadores y metodologías activas, los estudiantes desarrollan habilidades prácticas, colaborativas y aplicables a su contexto. Esto responde al mandato de formar individuos "críticos, reflexivos y creativos con valores".</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ESTRATEGIA 2: TAXONOMÍA DE BLOOM Y FACIONE -->
-    <section class="bg-gray-100 py-12">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Estrategia 2: Desarrollo del Pensamiento Crítico</h2>
-            <p class="text-center mb-8 text-gray-600">Integración de la Taxonomía de Bloom y las Habilidades de Pensamiento Crítico de Peter Facione. Selecciona un nivel cognitivo:</p>
-            
-            <div class="flex flex-wrap justify-center gap-2 mb-8" id="tabs-container">
-                <button data-target="tab-comprender" class="tab-btn bg-blue-900 text-white px-6 py-2 rounded-full font-bold shadow transition">Recordar / Comprender</button>
-                <button data-target="tab-aplicar" class="tab-btn bg-white text-blue-900 px-6 py-2 rounded-full font-bold shadow transition">Aplicar</button>
-                <button data-target="tab-analizar" class="tab-btn bg-white text-blue-900 px-6 py-2 rounded-full font-bold shadow transition">Analizar</button>
-                <button data-target="tab-evaluar" class="tab-btn bg-white text-blue-900 px-6 py-2 rounded-full font-bold shadow transition">Evaluar</button>
-                <button data-target="tab-crear" class="tab-btn bg-white text-blue-900 px-6 py-2 rounded-full font-bold shadow transition">Crear</button>
+    <!-- ESTRATEGIA 2: TABLA Y PESTAÑAS (PENSAMIENTO CRÍTICO) -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider">Estrategia 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-4 mb-4">Desarrollo del Pensamiento Crítico</h2>
+                <p class="text-lg text-slate-600">Integración didáctica de la <strong>Taxonomía de Bloom</strong> y las <strong>Habilidades de Peter Facione</strong> para lograr el perfil misional requerido.</p>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg min-h-[200px]" id="tab-contents">
-                <div id="tab-comprender" class="tab-content">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Recordar y Comprender (Base de conocimiento)</h3>
-                    <p class="text-gray-700"><strong>Habilidad Facione:</strong> Interpretación.</p>
-                    <p class="text-gray-700 mt-2"><strong>Metodología Activa:</strong> Búsqueda de información base y uso de herramientas tecnológicas para recuperar y explicar conceptos ciudadanos con palabras propias.</p>
+            <!-- LA TABLA SOLICITADA -->
+            <div class="mb-16 overflow-x-auto bg-white rounded-xl shadow-xl border border-slate-200">
+                <div class="bg-indigo-900 p-4">
+                    <h3 class="text-xl font-bold text-white text-center">Tabla 1. Progresión Cognitiva y Taxonomía en el Aula</h3>
                 </div>
-                <div id="tab-aplicar" class="tab-content hidden">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Aplicar (Estudiante Práctico)</h3>
-                    <p class="text-gray-700"><strong>Habilidad Facione:</strong> Explicación e Inferencia.</p>
-                    <p class="text-gray-700 mt-2"><strong>Metodología Activa:</strong> Uso del conocimiento adquirido en simulaciones, ejercicios prácticos y escenarios de la vida real dentro de un entorno seguro.</p>
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-indigo-50 text-indigo-900 text-lg">
+                            <th class="p-4 border-b-2 border-indigo-200 font-bold w-1/5">Nivel Cognitivo (Bloom)</th>
+                            <th class="p-4 border-b-2 border-indigo-200 font-bold w-1/5">Habilidad (Facione)</th>
+                            <th class="p-4 border-b-2 border-indigo-200 font-bold w-2/5">Aplicación Práctica / Metodología Activa</th>
+                            <th class="p-4 border-b-2 border-indigo-200 font-bold w-1/5">Perfil Misional Logrado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700">
+                        <tr class="hover:bg-indigo-50/50 transition-colors border-b border-slate-100 group">
+                            <td class="p-4 font-semibold text-indigo-700">1. Recordar / Comprender</td>
+                            <td class="p-4">Interpretación</td>
+                            <td class="p-4">Búsqueda de información base, uso de herramientas tecnológicas para recuperar y explicar conceptos con palabras propias.</td>
+                            <td class="p-4 font-medium text-emerald-600"><span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Base de conocimiento</span></td>
+                        </tr>
+                        <tr class="hover:bg-indigo-50/50 transition-colors border-b border-slate-100 group">
+                            <td class="p-4 font-semibold text-indigo-700">2. Aplicar</td>
+                            <td class="p-4">Explicación e Inferencia</td>
+                            <td class="p-4">Uso del conocimiento adquirido en simulaciones, ejercicios prácticos y escenarios de la vida real dentro de un entorno seguro.</td>
+                            <td class="p-4 font-medium text-blue-600"><span class="bg-blue-100 px-3 py-1 rounded-full text-sm">Estudiante Práctico</span></td>
+                        </tr>
+                        <tr class="hover:bg-indigo-50/50 transition-colors border-b border-slate-100 group">
+                            <td class="p-4 font-semibold text-indigo-700">3. Analizar</td>
+                            <td class="p-4">Análisis</td>
+                            <td class="p-4">Desglose de problemas de la comunidad, identificación de causas, consecuencias y relaciones lógicas.</td>
+                            <td class="p-4 font-medium text-purple-600"><span class="bg-purple-100 px-3 py-1 rounded-full text-sm">Estudiante Reflexivo</span></td>
+                        </tr>
+                        <tr class="hover:bg-indigo-50/50 transition-colors border-b border-slate-100 group">
+                            <td class="p-4 font-semibold text-indigo-700">4. Evaluar</td>
+                            <td class="p-4">Evaluación y Autorregulación</td>
+                            <td class="p-4">Defensa de posturas, emisión de juicios sustentados en valores, y autoevaluación del propio proceso de aprendizaje.</td>
+                            <td class="p-4 font-medium text-orange-600"><span class="bg-orange-100 px-3 py-1 rounded-full text-sm">Estudiante Crítico</span></td>
+                        </tr>
+                        <tr class="hover:bg-indigo-50/50 transition-colors group">
+                            <td class="p-4 font-semibold text-indigo-700">5. Crear</td>
+                            <td class="p-4">Síntesis</td>
+                            <td class="p-4">Diseño, construcción e implementación de proyectos innovadores vinculados activamente a mejorar la comunidad.</td>
+                            <td class="p-4 font-medium text-rose-600"><span class="bg-rose-100 px-3 py-1 rounded-full text-sm">Estudiante Creativo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- DETALLE INTERACTIVO -->
+            <div class="bg-slate-100 rounded-2xl p-8 border border-slate-200">
+                <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">Exploración Detallada Interactiva</h3>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-8" id="tabs-container">
+                    <button data-target="tab-comprender" class="tab-btn bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold shadow-md hover:bg-indigo-700 transition transform hover:-translate-y-1">Nivel 1: Comprender</button>
+                    <button data-target="tab-aplicar" class="tab-btn bg-white text-indigo-600 border border-indigo-200 px-6 py-3 rounded-xl font-bold shadow-sm hover:bg-indigo-50 transition transform hover:-translate-y-1">Nivel 2: Aplicar</button>
+                    <button data-target="tab-analizar" class="tab-btn bg-white text-indigo-600 border border-indigo-200 px-6 py-3 rounded-xl font-bold shadow-sm hover:bg-indigo-50 transition transform hover:-translate-y-1">Nivel 3: Analizar</button>
+                    <button data-target="tab-evaluar" class="tab-btn bg-white text-indigo-600 border border-indigo-200 px-6 py-3 rounded-xl font-bold shadow-sm hover:bg-indigo-50 transition transform hover:-translate-y-1">Nivel 4: Evaluar</button>
+                    <button data-target="tab-crear" class="tab-btn bg-white text-indigo-600 border border-indigo-200 px-6 py-3 rounded-xl font-bold shadow-sm hover:bg-indigo-50 transition transform hover:-translate-y-1">Nivel 5: Crear</button>
                 </div>
-                <div id="tab-analizar" class="tab-content hidden">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Analizar (Estudiante Reflexivo)</h3>
-                    <p class="text-gray-700"><strong>Habilidad Facione:</strong> Análisis.</p>
-                    <p class="text-gray-700 mt-2"><strong>Metodología Activa:</strong> Desglose de problemas de la comunidad, identificación de causas, consecuencias y relaciones lógicas socio-políticas.</p>
-                </div>
-                <div id="tab-evaluar" class="tab-content hidden">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Evaluar (Estudiante Crítico)</h3>
-                    <p class="text-gray-700"><strong>Habilidad Facione:</strong> Evaluación y Autorregulación.</p>
-                    <p class="text-gray-700 mt-2"><strong>Metodología Activa:</strong> Defensa de posturas ciudadanas, emisión de juicios sustentados en valores y autoevaluación del proceso.</p>
-                </div>
-                <div id="tab-crear" class="tab-content hidden">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Crear (Estudiante Creativo)</h3>
-                    <p class="text-gray-700"><strong>Habilidad Facione:</strong> Síntesis.</p>
-                    <p class="text-gray-700 mt-2"><strong>Metodología Activa:</strong> Diseño, construcción e implementación de proyectos innovadores vinculados activamente a mejorar la comunidad educativa Macandamine.</p>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-600 min-h-[220px]" id="tab-contents">
+                    <div id="tab-comprender" class="tab-content animate-fade-in">
+                        <h4 class="text-3xl font-extrabold text-indigo-900 mb-4 border-b pb-2">Recordar y Comprender <span class="text-lg font-normal text-slate-500 float-right mt-2">Fase Inicial</span></h4>
+                        <p class="text-slate-700 text-lg mb-3"><strong class="text-indigo-700">Conexión con Facione:</strong> La Interpretación es la base estructural del pensamiento crítico.</p>
+                        <p class="text-slate-700 text-lg"><strong class="text-indigo-700">Rol Docente:</strong> Proveer andamiaje tecnológico. Guiar a los estudiantes a no solo memorizar, sino a traducir los conceptos ciudadanos a su propia jerga y contexto comunitario, consolidando una base de conocimiento robusta.</p>
+                    </div>
+                    <div id="tab-aplicar" class="tab-content hidden animate-fade-in">
+                        <h4 class="text-3xl font-extrabold text-indigo-900 mb-4 border-b pb-2">Aplicar <span class="text-lg font-normal text-slate-500 float-right mt-2">Fase Práctica</span></h4>
+                        <p class="text-slate-700 text-lg mb-3"><strong class="text-indigo-700">Conexión con Facione:</strong> Explicación e Inferencia.</p>
+                        <p class="text-slate-700 text-lg"><strong class="text-indigo-700">Rol Docente:</strong> Generar simulaciones (como debates electorales o asambleas estudiantiles) donde el conocimiento teórico de la ciudadanía se ponga a prueba en escenarios prácticos dentro del entorno seguro del aula.</p>
+                    </div>
+                    <div id="tab-analizar" class="tab-content hidden animate-fade-in">
+                        <h4 class="text-3xl font-extrabold text-indigo-900 mb-4 border-b pb-2">Analizar <span class="text-lg font-normal text-slate-500 float-right mt-2">Fase Reflexiva</span></h4>
+                        <p class="text-slate-700 text-lg mb-3"><strong class="text-indigo-700">Conexión con Facione:</strong> Análisis estructural.</p>
+                        <p class="text-slate-700 text-lg"><strong class="text-indigo-700">Rol Docente:</strong> Plantear problemáticas reales del barrio o cantón. El estudiante reflexivo debe desglosar el problema, encontrar qué leyes u ordenanzas fallan, e identificar las relaciones sociopolíticas que causan el conflicto.</p>
+                    </div>
+                    <div id="tab-evaluar" class="tab-content hidden animate-fade-in">
+                        <h4 class="text-3xl font-extrabold text-indigo-900 mb-4 border-b pb-2">Evaluar <span class="text-lg font-normal text-slate-500 float-right mt-2">Fase Crítica</span></h4>
+                        <p class="text-slate-700 text-lg mb-3"><strong class="text-indigo-700">Conexión con Facione:</strong> Evaluación de argumentos y Autorregulación.</p>
+                        <p class="text-slate-700 text-lg"><strong class="text-indigo-700">Rol Docente:</strong> Moderar debates donde los estudiantes deban defender una postura cívica justificando sus valores. Se incluye la autoevaluación, pilar del constructivismo donde el estudiante mide su propio avance.</p>
+                    </div>
+                    <div id="tab-crear" class="tab-content hidden animate-fade-in">
+                        <h4 class="text-3xl font-extrabold text-indigo-900 mb-4 border-b pb-2">Crear <span class="text-lg font-normal text-slate-500 float-right mt-2">Fase de Innovación</span></h4>
+                        <p class="text-slate-700 text-lg mb-3"><strong class="text-indigo-700">Conexión con Facione:</strong> Síntesis (aplica todas las habilidades anteriores conjuntas).</p>
+                        <p class="text-slate-700 text-lg"><strong class="text-indigo-700">Rol Docente:</strong> Facilitar proyectos de vinculación con la comunidad. El estudiante creativo diseña e implementa una campaña o proyecto real (ej. reciclaje en el colegio, brigadas estudiantiles) que impacte positivamente a la sociedad.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
-        <p>&copy; 2024 Proyecto Áulico - Maestría de Educación de Bachillerato</p>
+    <footer class="bg-slate-900 text-slate-400 text-center py-10 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <h4 class="text-white text-xl font-bold mb-4">Unidad Educativa Macandamine</h4>
+            <p class="mb-4">Proyecto Áulico - Maestría de Educación de Bachillerato<br>Desarrollado para la Unidad 3: Educación para la Ciudadanía y su Didáctica</p>
+            <p class="text-sm">&copy; 2024. Diseñado como recurso educativo interactivo.</p>
+        </div>
     </footer>
+
+    <style>
+        /* Animación suave para las pestañas */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
 
     <script>
         // Lógica de las tarjetas (Estrategia 1)
@@ -123,6 +236,7 @@ import '../styles/global.css';
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const content = card.querySelector('.card-content');
+                // Alternar visibilidad con Tailwind classes
                 content.classList.toggle('hidden');
             });
         });
@@ -135,12 +249,12 @@ import '../styles/global.css';
             btn.addEventListener('click', () => {
                 // Remover clases activas de todos los botones
                 tabBtns.forEach(b => {
-                    b.classList.remove('bg-blue-900', 'text-white');
-                    b.classList.add('bg-white', 'text-blue-900');
+                    b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-indigo-600', 'shadow-sm');
                 });
                 // Añadir clases activas al botón clickeado
-                btn.classList.remove('bg-white', 'text-blue-900');
-                btn.classList.add('bg-blue-900', 'text-white');
+                btn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm');
+                btn.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
 
                 // Ocultar todos los contenidos
                 tabContents.forEach(content => content.classList.add('hidden'));
